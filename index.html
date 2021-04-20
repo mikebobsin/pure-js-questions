@@ -1,0 +1,84 @@
+<html>
+    <head> 
+        <script type="text/javascript" src="index.js" ></script>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form onsubmit="return false">
+            <div class="q-1">
+                <h3>Questão 1</h3> 
+                <h4>Implemente um método para percorrer um array, verificando se o número é par. Se for verdadeiro, 
+                multiplicar por dois, e se algum for maior que 50 retornar verdadeiro. Criar outro método seguindo 
+                os mesmos requisitos, porém para números ímpares, e o valor de teste para verdadeiro é 40.</h4>
+                <label for="evenValues">Array:</label>
+                <input type="text" id="evenValues" placeholder="1,2,4,6,7"/>
+                <input type='submit' id='submit' value='Testar' onclick="showEvenValues()" />
+                <p id="textEven"></p>
+
+                <label for="oddValues">Array:</label>
+                <input type="text" id="oddValues" placeholder="1,2,4,6,7" />
+                <input type='submit' id='submit' value='Testar' onclick="showOddValues()" />
+                <p id="textOdd"></p>
+            </div>
+
+            <div class="q-2">
+                <h3>Questão 2</h3> 
+                <h4>Inserção ordenada:
+                    Faça um método que recebe um array de números inteiros e um novo número para ser inserido. Insira o novo número no array de 
+                    forma ordenada, ou seja, na posição do array em que ele continue ordenado do menor para o maior, sem usar o método sort.</h4> 
+                <label for="orderArray">Array:</label>
+                <input type="text" id="getArray" placeholder="1,2,4,6,7"/>
+                <label for="orderArray">Inserir Numero: </label>
+                <input style="width:30px" type="text" id="newValue" placeholder="3" />
+                <input type='submit' id='submit' value='Testar' onclick="orderArray()" />
+            <p id="showArray"></p>
+            </div>
+
+            <div class="q-3">
+                <h3>Questão 3</h3> 
+                <h4>Valor único:
+                    Faça um método que recebe um array de objetos e retorna um novo array somente com os valores que só ocorrem uma vez no array.
+                    
+                    [1, 3, 5, "tt", 1, 5 ] => [3, "tt"]</h4> 
+                <label for="nonRepeatable">Array:</label>
+                <input type="text" id="repeatableArray" placeholder="1, 3, 5, tt, 1, 5" />
+                <input type='submit' id='submit' value='Testar' onclick="nonRepeatable()" />
+                <p id="nonRepeatable"></p>
+            </div>
+       
+            <div class="q-4">
+                <h3>Questão 4</h3>
+                <h4>Compactador:
+                    Escreva dois métodos, um que recebe uma String de zeros e uns e comprime ela da seguinte maneira:
+                    11100110000 -> 31202140
+                    Outro que recebe a String comprimida e escreve ela descomprimida:
+                    31202140 -> 11100110000</h4>
+                <label for="changeNumber">Valor:</label>
+                <input type="text" id="packNumber" placeholder="11100110000" />
+                <input type='submit' id='submit' value='Testar' onclick="compactNumber()" />
+
+                <label for="changeNumber">Valor:</label>
+                <input type="text" id="unpackNumber" placeholder="31202140 " />
+                <input type='submit' id='submit' value='Testar' onclick="undoCompactNumber()" />
+                <p id="newNumber"></p>
+            </div>
+            
+            <div class="q-4">
+                <h3>Questão 5</h3>
+                <h4>FilaVip:
+                    Implemente os métodos abaixo, necessários para uma FilaVip.
+                    
+                    enfilerar - insere um elemento no fim da fila
+                    atender - remove o elemento do início da fila
+                    enfilerarVip - insere um elemento no atrás do último elemento vip ou no início da fila se for o primeiro Vip.</h4> <br><br>
+                <label for="VipLine">Clique no botão</label>
+                <input type='submit' id='submit' value='Atender' onclick="next()" />
+                <input type='submit' id='submit' value='Adiciona Vip' onclick="adcVip()" />
+                <input type='submit' id='submit' value='Adiciona Normal' onclick="adcNormal()" />
+                <p id="result">VIP, VIP, Normal, Normal, Normal</p>
+            </div>
+        </form>
+    </body>
+</html>
